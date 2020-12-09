@@ -3,12 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'rfrfstore' do
+target 'rfstore' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'rfrfstoreTests' do
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  target 'rfstoreTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +25,10 @@ target 'rfrfstore' do
   end
 end
 
-target 'rfrfstore-tvOS' do
-  # Pods for rfrfstore-tvOS
+target 'rfstore-tvOS' do
+  # Pods for rfstore-tvOS
 
-  target 'rfrfstore-tvOSTests' do
+  target 'rfstore-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
