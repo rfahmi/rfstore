@@ -1,0 +1,165 @@
+[
+    {
+        "panel_id" : 1,
+        "panel_type" : "title",
+        "panel_param1" : "Promo Hari Ini",
+        "panel_param2" : "1",
+        "panel_color1" : null,
+        "panel_color2" : null,
+        "panel_pic" : null,
+        "items" : []
+    },
+    {
+        "panel_id" : 2,
+        "panel_type" : "item_slide",
+        "panel_param1" : null,
+        "panel_param2" : null,
+        "panel_color1" : "#377894",
+        "panel_color2" : null,
+        "panel_pic" : "https://ecs7-p.tokopedia.net/img/cache/240/PYbRbC/2020/12/6/076ca485-c52a-483e-99d5-44e8ec0d09ca.png.webp",
+        "items" : [
+            {
+                "item_id": "1",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "2",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "3",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "4",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "5",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "6",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              }
+            ]
+    },
+    {
+        "panel_id" : 3,
+        "panel_type" : "title",
+        "panel_param1" : "Happening",
+        "panel_param2" : "1",
+        "panel_color1" : null,
+        "panel_color2" : null,
+        "panel_pic" : null,
+        "items" : []
+    },
+    {
+        "panel_id" : 4,
+        "panel_type" : "banner_grid",
+        "panel_param1" : 2,
+        "panel_param2" : "https://page.harnic.id/url/season8",
+        "panel_color1" : "#377894",
+        "panel_color2" : null,
+        "panel_pic" : "",
+        "items" : [
+            {
+                "banner_id" : 1,
+                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/3/f6879c26-6f29-4977-8f67-63e3df9c58d5.jpg.webp"
+            },
+            {
+                "banner_id" : 2,
+                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/da0f448b-ddeb-4159-a4ca-2abc6cac305e.jpg.webp"
+            },
+            {
+                "banner_id" : 3,
+                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/82b07a9b-c288-491f-a0dd-3e9fd8847ca6.jpg.webp"
+            },
+            {
+                "banner_id" : 4,
+                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/5dc25b11-4716-4f9d-80f1-14c78958d621.jpg.webp"
+            }
+        ]
+    },
+    {
+        "panel_id" : 5,
+        "panel_type" : "title",
+        "panel_param1" : "Terakhir Dilihat",
+        "panel_param2" : "1",
+        "panel_color1" : null,
+        "panel_color2" : null,
+        "panel_pic" : null,
+        "items" : []
+    },
+    {
+        "panel_id" : 6,
+        "panel_type" : "item_grid",
+        "panel_param1" : 2,
+        "panel_param2" : null,
+        "panel_color1" : "#377894",
+        "panel_color2" : null,
+        "panel_pic" : "https://ecs7-p.tokopedia.net/img/cache/240/PYbRbC/2020/12/6/076ca485-c52a-483e-99d5-44e8ec0d09ca.png.webp",
+        "items" : [
+            {
+                "item_id": "1",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "2",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "3",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "4",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "5",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              },
+              {
+                "item_id": "6",
+                "item_name": "Lorem ipsum dolor sit amet sic mundus creatus est",
+                "item_price": 100000,
+                "item_pic":
+                  "https://assets.harnicid.com/products/webp/12bce35cce4ea3590de39bc297211e48.jpg.webp"
+              }
+            ]
+    }
+]
