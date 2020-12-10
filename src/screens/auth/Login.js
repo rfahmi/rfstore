@@ -5,6 +5,7 @@ import {
   Text,
   View,
   StatusBar,
+  ScrollView,
 } from 'react-native';
 import Background from '../../components/Background';
 import Logo from '../../components/Logo';
@@ -33,54 +34,62 @@ const Login = ({navigation}) => {
   };
 
   return (
-    <Background>
-      <StatusBar barStyle="dark-content" backgroundColor="rgba(0,0,0,0.3)" />
+    <>
       <BackButton goBack={() => navigation.goBack()} />
+      <ScrollView style={{padding: 16}}>
+        <Background>
+          <StatusBar
+            barStyle="dark-content"
+            backgroundColor="rgba(0,0,0,0.3)"
+          />
 
-      <Logo />
+          <Logo />
 
-      <Header>Selamat datang kembali.</Header>
+          <Header>Selamat datang kembali.</Header>
 
-      <TextInput
-        label="Email"
-        returnKeyType="next"
-        value={email.value}
-        onChangeText={(text) => setEmail({value: text, error: ''})}
-        error={!!email.error}
-        errorText={email.error}
-        autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
-      />
+          <TextInput
+            label="Email"
+            returnKeyType="next"
+            value={email.value}
+            onChangeText={(text) => setEmail({value: text, error: ''})}
+            error={!!email.error}
+            errorText={email.error}
+            autoCapitalize="none"
+            autoCompleteType="email"
+            textContentType="emailAddress"
+            keyboardType="email-address"
+          />
 
-      <TextInput
-        label="Password"
-        returnKeyType="done"
-        value={password.value}
-        onChangeText={(text) => setPassword({value: text, error: ''})}
-        error={!!password.error}
-        errorText={password.error}
-        secureTextEntry
-      />
+          <TextInput
+            label="Password"
+            returnKeyType="done"
+            value={password.value}
+            onChangeText={(text) => setPassword({value: text, error: ''})}
+            error={!!password.error}
+            errorText={password.error}
+            secureTextEntry
+          />
 
-      <View style={styles.forgotPassword}>
-        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={styles.label}>Lupa password?</Text>
-        </TouchableOpacity>
-      </View>
+          <View style={styles.forgotPassword}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('ForgotPassword')}>
+              <Text style={styles.label}>Lupa password?</Text>
+            </TouchableOpacity>
+          </View>
 
-      <Button mode="contained" onPress={_onLoginPressed}>
-        Login
-      </Button>
+          <Button mode="contained" onPress={_onLoginPressed}>
+            Login
+          </Button>
 
-      <View style={styles.row}>
-        <Text style={styles.label}>Tidak punya akun? </Text>
-        <TouchableOpacity onPress={() => navigation.push('Register')}>
-          <Text style={styles.link}>Daftar disini</Text>
-        </TouchableOpacity>
-      </View>
-    </Background>
+          <View style={styles.row}>
+            <Text style={styles.label}>Tidak punya akun? </Text>
+            <TouchableOpacity onPress={() => navigation.push('Register')}>
+              <Text style={styles.link}>Daftar disini</Text>
+            </TouchableOpacity>
+          </View>
+        </Background>
+      </ScrollView>
+    </>
   );
 };
 

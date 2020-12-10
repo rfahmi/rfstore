@@ -2,31 +2,31 @@
     {
         "cat_id": 1,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/0_grocery2.png",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-04.png?alt=media&token=3fa5b8b2-794c-4a16-a662-ea26aee05805"
       },
       {
         "cat_id": 2,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/beauty7.png",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-07.png?alt=media&token=8830a48d-997e-44bc-89b8-26f17525e0d2"
       },
       {
         "cat_id": 3,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/household.png",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-08.png?alt=media&token=6540e016-bd19-454c-b838-1e0b7d9e6661"
       },
       {
         "cat_id": 4,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/0_kitchen.png",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-09.png?alt=media&token=9608f8be-2ac7-4720-9caa-aa460a29ba02"
       },
       {
         "cat_id": 5,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/0_electrical.png",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-10.png?alt=media&token=4881b3e8-c8e7-4464-b73d-13f847a56098"
       },
       {
         "cat_id": 6,
         "cat_pic":
-          "https://assets.harnicid.com/categories/poster/square/0_fashion2.jpg",
+          "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-11.png?alt=media&token=68b198bd-0594-4667-b609-cd0f1b05c68c"
       }
 ]

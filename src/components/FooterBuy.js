@@ -30,7 +30,7 @@ const FooterBuy = () => {
           style={{margin: 4}}
           labelStyle={{fontSize: 10}}
           color={colors.primary}
-          icon="message"
+          icon="message-outline"
         />
         <Button
           onPress={_handleBuy}

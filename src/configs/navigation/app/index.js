@@ -13,6 +13,7 @@ const AppStack = () => {
   return (
     <Tab.Navigator
       headerMode="none"
+      backBehavior="history"
       initialRouteName="Home"
       activeColor={colors.primary}
       inactiveColor={colors.gray}

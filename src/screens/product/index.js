@@ -12,9 +12,8 @@ const Product = ({navigation, route}) => {
   const {item_id} = route.params;
   const item = items.filter((i) => i.item_id === 1);
   const [data, setData] = useState();
-  console.log(item);
   return (
-    <View>
+    <>
       <StatusBar
         translucent
         barStyle="dark-content"
@@ -108,10 +107,10 @@ const Product = ({navigation, route}) => {
           </Text>
         </View>
 
-        <Separator />
+        <View style={{marginBottom: 60}} />
       </ScrollView>
       <FooterBuy />
-    </View>
+    </>
   );
 };
 

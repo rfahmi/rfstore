@@ -1,11 +1,11 @@
 import React, {memo, useState} from 'react';
-import {Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Background from '../../components/Background';
-import Logo from '../../components/Logo';
-import Header from '../../components/Header';
-import Button from '../../components/Button';
-import TextInput from '../../components/TextInput';
+import {ScrollView, StyleSheet} from 'react-native';
 import BackButton from '../../components/BackButton';
+import Background from '../../components/Background';
+import Button from '../../components/Button';
+import Header from '../../components/Header';
+import Logo from '../../components/Logo';
+import TextInput from '../../components/TextInput';
 import {colors} from '../../constants/colors';
 import {emailValidator} from '../../utils/validator';
 
@@ -24,30 +24,36 @@ const ForgotPassword = ({navigation}) => {
   };
 
   return (
-    <Background>
+    <>
       <BackButton goBack={() => navigation.goBack()} />
+      <ScrollView style={{padding: 16}}>
+        <Background>
+          <Logo />
 
-      <Logo />
+          <Header>Lupa Password</Header>
 
-      <Header>Lupa Password</Header>
+          <TextInput
+            label="E-mail address"
+            returnKeyType="done"
+            value={email.value}
+            onChangeText={(text) => setEmail({value: text, error: ''})}
+            error={!!email.error}
+            errorText={email.error}
+            autoCapitalize="none"
+            autoCompleteType="email"
+            textContentType="emailAddress"
+            keyboardType="email-address"
+          />
 
-      <TextInput
-        label="E-mail address"
-        returnKeyType="done"
-        value={email.value}
-        onChangeText={(text) => setEmail({value: text, error: ''})}
-        error={!!email.error}
-        errorText={email.error}
-        autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
-      />
-
-      <Button mode="contained" onPress={_onSendPressed} style={styles.button}>
-        Kirim Instruksi Reset
-      </Button>
-    </Background>
+          <Button
+            mode="contained"
+            onPress={_onSendPressed}
+            style={styles.button}>
+            Kirim Instruksi Reset
+          </Button>
+        </Background>
+      </ScrollView>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import Carousel from 'react-native-smart-carousel';
 
 const Banners = ({banners}) => {
   const navigation = useNavigation();
-  const HEADER_MAX_HEIGHT = Dimensions.get('window').width * 0.7;
+  const HEADER_MAX_HEIGHT = Dimensions.get('window').width * 0.75;
   return (
     <View style={{position: 'relative', marginBottom: 16}}>
       <View
@@ -13,7 +13,7 @@ const Banners = ({banners}) => {
           position: 'absolute',
           backgroundColor: '#fff',
           bottom: -10,
-          padding: 8,
+          padding: 4,
           borderTopRightRadius: 4,
           borderBottomRightRadius: 4,
           left: 0,
@@ -21,8 +21,8 @@ const Banners = ({banners}) => {
           elevation: 5,
         }}>
         <Image
-          source={require('../../../assets/images/harnic.png')}
-          style={{height: 10, aspectRatio: 9 / 1, alignItems: 'center'}}
+          source={require('../../../assets/images/rfstore-label.png')}
+          style={{height: 16, aspectRatio: 5 / 1, alignItems: 'center'}}
           resizeMode="contain"
         />
       </View>

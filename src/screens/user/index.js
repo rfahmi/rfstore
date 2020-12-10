@@ -32,16 +32,18 @@ const User = ({navigation}) => {
             alignItems: 'center',
           }}>
           <View style={{flex: 1}}>
-            <Title style={{fontWeight: '600'}}>Fahmi Rizalul</Title>
+            <Title style={{fontWeight: '600', color: colors.primaryDark}}>
+              Fahmi Rizalul
+            </Title>
             <View
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                backgroundColor: '#eee',
+                backgroundColor: colors.grayLight,
                 borderRadius: 6,
                 padding: 6,
               }}>
-              <Text style={{fontSize: 12, color: colors.grayDark}}>
+              <Text style={{fontSize: 12, color: colors.primaryDark}}>
                 rfahmi@outlook.com
               </Text>
               <Icon name="check-circle" color={colors.green} size={16} />
@@ -208,7 +210,7 @@ const User = ({navigation}) => {
                 <Badge
                   visible={true}
                   style={{backgroundColor: 'orange', color: '#fff'}}>
-                  100
+                  5
                 </Badge>
               </View>
             )}
@@ -261,7 +263,7 @@ const User = ({navigation}) => {
           </Button>
         </View>
         <View style={{flex: 1, alignItems: 'center', height: 50}}>
-          <Text style={{color: colors.gray, fontSize: 12}}>versi 3.0.0</Text>
+          <Text style={{color: colors.gray, fontSize: 12}}>Versi 3.0.0</Text>
           <Text style={{color: colors.gray, fontSize: 12}}>
             {'\u00A9'} Fahmi Rizalul
           </Text>

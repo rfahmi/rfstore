@@ -3,6 +3,7 @@ import {Dimensions} from 'react-native';
 import Carousel from 'react-native-smart-carousel';
 
 const ProductPictures = ({pictures}) => {
+  console.log(pictures);
   const HEADER_MAX_HEIGHT = Dimensions.get('window').width;
   return (
     <Carousel
@@ -12,7 +13,7 @@ const ProductPictures = ({pictures}) => {
       onPress={(e) => console.log(e)}
       navigation={true}
       navigationColor={'#ffffff'}
-      navigationType={'bars'}
+      navigationType={'dot'}
     />
   );
 };

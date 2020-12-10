@@ -1,57 +1,58 @@
 import React, {useEffect} from 'react';
-import {Image, View} from 'react-native';
+import {Dimensions, Image, StatusBar, Text, View} from 'react-native';
+import {colors} from '../../constants/colors';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
-    setTimeout(() => navigation.replace('App'), 500);
+    setTimeout(() => navigation.replace('App'), 600);
   }, []);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-around',
-      }}>
+    <>
+      <StatusBar
+        translucent={false}
+        barStyle="dark-content"
+        backgroundColor="transparent"
+      />
       <View
         style={{
-          flex: 3,
-          flexDirection: 'column',
+          flex: 1,
+          alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Image
+        <View
           style={{
-            width: 200,
-            justifyContent: 'center',
-            alignContent: 'center',
-            resizeMode: 'contain',
-          }}
-          source={require('../../assets/images/harnic.png')}
-        />
+            width: Dimensions.get('window').width / 3,
+            aspectRatio: 1 / 1,
+            alignItems: 'center',
+          }}>
+          <Image
+            style={{
+              flex: 1,
+            }}
+            resizeMode="contain"
+            source={require('../../assets/images/rfstore.png')}
+          />
+        </View>
+        <View style={{alignItems: 'center'}}>
+          <Text style={{fontWeight: 'bold', fontSize: 28}}>rfstore</Text>
+          <Text>React Native Online Store Demo</Text>
+        </View>
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 16,
+            left: 0,
+            right: 0,
+            alignItems: 'center',
+          }}>
+          <Text style={{color: colors.gray, fontSize: 12}}>Versi 3.0.0</Text>
+          <Text style={{color: colors.gray, fontSize: 12}}>
+            {'\u00A9'} Fahmi Rizalul
+          </Text>
+        </View>
       </View>
-      <View style={{flex: 1, flexDirection: 'row'}}>
-        <Image
-          style={{
-            flex: 1,
-            height: 100,
-            justifyContent: 'center',
-            alignContent: 'center',
-            resizeMode: 'contain',
-          }}
-          source={require('../../assets/images/freeongkir.png')}
-        />
-        <Image
-          style={{
-            flex: 1,
-            height: 100,
-            justifyContent: 'center',
-            alignContent: 'center',
-            resizeMode: 'contain',
-          }}
-          source={require('../../assets/images/cod.png')}
-        />
-      </View>
-    </View>
+    </>
   );
 };
 

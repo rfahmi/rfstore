@@ -14,9 +14,9 @@
         "panel_type" : "item_slide",
         "panel_param1" : null,
         "panel_param2" : null,
-        "panel_color1" : "#377894",
+        "panel_color1" : "#1b1982",
         "panel_color2" : null,
-        "panel_pic" : "https://ecs7-p.tokopedia.net/img/cache/240/PYbRbC/2020/12/6/076ca485-c52a-483e-99d5-44e8ec0d09ca.png.webp",
+        "panel_pic" : "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-12.png?alt=media&token=b3e6c137-b2b0-4e86-9bb7-b7934e21a399",
         "items" : [
             {
                 "item_id": "1",
@@ -77,25 +77,25 @@
         "panel_type" : "banner_grid",
         "panel_param1" : 2,
         "panel_param2" : "https://page.harnic.id/url/season8",
-        "panel_color1" : "#377894",
+        "panel_color1" : "#1b1982",
         "panel_color2" : null,
         "panel_pic" : "",
         "items" : [
             {
                 "banner_id" : 1,
-                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/3/f6879c26-6f29-4977-8f67-63e3df9c58d5.jpg.webp"
+                "banner_url" : "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-13.png?alt=media&token=60e4690b-f1b2-436d-8284-d3b858791a59"
             },
             {
                 "banner_id" : 2,
-                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/da0f448b-ddeb-4159-a4ca-2abc6cac305e.jpg.webp"
+                "banner_url" : "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-14.png?alt=media&token=3e8e708f-679d-4eca-be90-5425c6eda607"
             },
             {
                 "banner_id" : 3,
-                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/82b07a9b-c288-491f-a0dd-3e9fd8847ca6.jpg.webp"
+                "banner_url" : "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-15.png?alt=media&token=437dbd86-6481-483c-86ae-5ff4544474d3"
             },
             {
                 "banner_id" : 4,
-                "banner_url" : "https://ecs7-p.tokopedia.net/img/cache/400/RInQea/2020/12/7/5dc25b11-4716-4f9d-80f1-14c78958d621.jpg.webp"
+                "banner_url" : "https://firebasestorage.googleapis.com/v0/b/rfahmi-id.appspot.com/o/rfstore%2Fasset-16.png?alt=media&token=a827712f-0225-49db-8ab2-e3065eea32b1"
             }
         ]
     },
@@ -114,9 +114,9 @@
         "panel_type" : "item_grid",
         "panel_param1" : 2,
         "panel_param2" : null,
-        "panel_color1" : "#377894",
+        "panel_color1" : "#1b1982",
         "panel_color2" : null,
-        "panel_pic" : "https://ecs7-p.tokopedia.net/img/cache/240/PYbRbC/2020/12/6/076ca485-c52a-483e-99d5-44e8ec0d09ca.png.webp",
+        "panel_pic" : null,
         "items" : [
             {
                 "item_id": "1",

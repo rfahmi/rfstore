@@ -11,7 +11,8 @@ const ProductCard = ({item, style}) => {
         <FastImage
           style={{
             flex: 1,
-            borderRadius: 10,
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4,
           }}
           source={{
             uri: item.item_pic,
@@ -24,7 +25,13 @@ const ProductCard = ({item, style}) => {
         <Text style={{fontSize: 10}} numberOfLines={2}>
           {item.item_name}
         </Text>
-        <Text style={{fontSize: 12, fontWeight: 'bold', color: 'orange'}}>
+        <Text
+          style={{
+            fontSize: 12,
+            fontWeight: 'bold',
+            color: 'orange',
+            marginTop: 8,
+          }}>
           Rp{currencyFormat(200000)}
         </Text>
       </View>

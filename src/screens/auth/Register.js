@@ -1,5 +1,11 @@
 import React, {memo, useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import Background from '../../components/Background';
 import Logo from '../../components/Logo';
 import Header from '../../components/Header';
@@ -34,56 +40,62 @@ const Register = ({navigation}) => {
   };
 
   return (
-    <Background>
+    <>
       <BackButton goBack={() => navigation.goBack()} />
+      <ScrollView style={{padding: 16}}>
+        <Background>
+          <Logo />
 
-      <Logo />
+          <Header>Dapatkan Penawaran Terbaik</Header>
 
-      <Header>Dapatkan Penawaran Terbaik</Header>
+          <TextInput
+            label="Name"
+            returnKeyType="next"
+            value={name.value}
+            onChangeText={(text) => setName({value: text, error: ''})}
+            error={!!name.error}
+            errorText={name.error}
+          />
 
-      <TextInput
-        label="Name"
-        returnKeyType="next"
-        value={name.value}
-        onChangeText={(text) => setName({value: text, error: ''})}
-        error={!!name.error}
-        errorText={name.error}
-      />
+          <TextInput
+            label="Email"
+            returnKeyType="next"
+            value={email.value}
+            onChangeText={(text) => setEmail({value: text, error: ''})}
+            error={!!email.error}
+            errorText={email.error}
+            autoCapitalize="none"
+            autoCompleteType="email"
+            textContentType="emailAddress"
+            keyboardType="email-address"
+          />
 
-      <TextInput
-        label="Email"
-        returnKeyType="next"
-        value={email.value}
-        onChangeText={(text) => setEmail({value: text, error: ''})}
-        error={!!email.error}
-        errorText={email.error}
-        autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
-      />
+          <TextInput
+            label="Password"
+            returnKeyType="done"
+            value={password.value}
+            onChangeText={(text) => setPassword({value: text, error: ''})}
+            error={!!password.error}
+            errorText={password.error}
+            secureTextEntry
+          />
 
-      <TextInput
-        label="Password"
-        returnKeyType="done"
-        value={password.value}
-        onChangeText={(text) => setPassword({value: text, error: ''})}
-        error={!!password.error}
-        errorText={password.error}
-        secureTextEntry
-      />
+          <Button
+            mode="contained"
+            onPress={_onSignUpPressed}
+            style={styles.button}>
+            Sign Up
+          </Button>
 
-      <Button mode="contained" onPress={_onSignUpPressed} style={styles.button}>
-        Sign Up
-      </Button>
-
-      <View style={styles.row}>
-        <Text style={styles.label}>Sudah punya akun? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.link}>Login</Text>
-        </TouchableOpacity>
-      </View>
-    </Background>
+          <View style={styles.row}>
+            <Text style={styles.label}>Sudah punya akun? </Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.link}>Login</Text>
+            </TouchableOpacity>
+          </View>
+        </Background>
+      </ScrollView>
+    </>
   );
 };
 

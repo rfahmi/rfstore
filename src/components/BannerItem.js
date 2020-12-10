@@ -8,7 +8,6 @@ const BannerItem = ({image, style}) => {
       <FastImage
         style={{
           flex: 1,
-          borderRadius: 10,
         }}
         source={{
           uri: image,

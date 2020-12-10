@@ -1,14 +1,18 @@
 import React, {memo} from 'react';
-import {Image, StyleSheet} from 'react-native';
+import {Dimensions, Image, StyleSheet} from 'react-native';
 
 const Logo = () => (
-  <Image source={require('../assets/images/harnic.png')} style={styles.image} />
+  <Image
+    source={require('../assets/images/rfstore.png')}
+    style={styles.image}
+  />
 );
 
 const styles = StyleSheet.create({
   image: {
-    width: 128,
-    aspectRatio: 3 / 1,
+    width: Dimensions.get('window').width / 4,
+    height: Dimensions.get('window').width / 4,
+    // aspectRatio: 1 / 1,
     resizeMode: 'contain',
     marginBottom: 12,
   },

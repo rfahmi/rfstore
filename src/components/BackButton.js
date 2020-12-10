@@ -13,7 +13,7 @@ const BackButton = ({goBack}) => (
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 10 + StatusBar.currentHeight,
+    top: StatusBar.currentHeight,
     left: 10,
     zIndex: 1,
   },
