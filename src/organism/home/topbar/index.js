@@ -29,7 +29,7 @@ const HomeTopBar = ({headerOpacity, visibility}) => {
             width: Dimensions.get('window').width,
             height: StatusBar.currentHeight,
             position: 'absolute',
-            backgroundColor: mode === 'light' ? 'transparent' : colors.gray,
+            backgroundColor: mode === 'light' ? 'transparent' : '#aaa',
             top: 0,
             left: 0,
             right: 0,
@@ -95,11 +95,6 @@ const HomeTopBar = ({headerOpacity, visibility}) => {
           opacity: visibility,
           flexDirection: 'row',
         }}>
-        {/* <FocusAwareStatusBar
-          translucent
-          barStyle="light-content"
-          backgroundColor="rgba(200,200,200,0)"
-        /> */}
         <HeaderContent mode="dark" />
       </Animated.View>
     </>

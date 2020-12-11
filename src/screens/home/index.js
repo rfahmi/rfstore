@@ -10,7 +10,7 @@ const Home = () => {
   const categories = require('../../dummy/categories.json');
   const panels = require('../../dummy/panels.json');
 
-  const headerOpacity = useRef(new Animated.Value(0)).current;
+  const scroll = useRef(new Animated.Value(0)).current;
 
   const _renderTop = () => {
     return (
@@ -31,18 +31,18 @@ const Home = () => {
   return (
     <>
       <TopBar
-        headerOpacity={headerOpacity.interpolate({
+        headerOpacity={scroll.interpolate({
           inputRange: [0, 300],
           outputRange: [1, 0],
         })}
-        visibility={headerOpacity.interpolate({
+        visibility={scroll.interpolate({
           inputRange: [0, 300],
           outputRange: [0, 1],
         })}
       />
       <Animated.FlatList
         onScroll={Animated.event(
-          [{nativeEvent: {contentOffset: {y: headerOpacity}}}],
+          [{nativeEvent: {contentOffset: {y: scroll}}}],
           {useNativeDriver: true},
         )}
         scrollEventThrottle={16}
