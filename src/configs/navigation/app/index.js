@@ -6,6 +6,7 @@ import Home from './home';
 import Shoplist from './shoplist';
 import Cart from './cart';
 import User from './user';
+import Feed from './feed';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -17,7 +18,6 @@ const AppStack = () => {
       initialRouteName="Home"
       activeColor={colors.primary}
       inactiveColor={colors.gray}
-      shifting={false}
       barStyle={{backgroundColor: '#fff'}}>
       <Tab.Screen
         name="Home"
@@ -25,6 +25,16 @@ const AppStack = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => <Icon name="home" color={color} size={26} />,
+        }}
+      />
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Feed',
+          tabBarIcon: ({color}) => (
+            <Icon name="checkbox-multiple-blank" color={color} size={26} />
+          ),
         }}
       />
       <Tab.Screen

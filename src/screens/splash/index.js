@@ -1,16 +1,17 @@
 import React, {useEffect} from 'react';
-import {Dimensions, Image, StatusBar, Text, View} from 'react-native';
+import {StatusBar, Text, View} from 'react-native';
+import Logo from '../../components/Logo';
 import {colors} from '../../constants/colors';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => navigation.replace('App'), 600);
-  }, []);
+  }, [navigation]);
 
   return (
     <>
       <StatusBar
-        translucent={false}
+        translucent
         barStyle="dark-content"
         backgroundColor="transparent"
       />
@@ -20,7 +21,7 @@ const Splash = ({navigation}) => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <View
+        {/* <View
           style={{
             width: Dimensions.get('window').width / 3,
             aspectRatio: 1 / 1,
@@ -33,7 +34,8 @@ const Splash = ({navigation}) => {
             resizeMode="contain"
             source={require('../../assets/images/rfstore.png')}
           />
-        </View>
+        </View> */}
+        <Logo />
         <View style={{alignItems: 'center'}}>
           <Text style={{fontWeight: 'bold', fontSize: 28}}>rfstore</Text>
           <Text>React Native Online Store Demo</Text>
