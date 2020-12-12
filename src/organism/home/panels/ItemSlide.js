@@ -1,11 +1,19 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {memo} from 'react';
-import {Dimensions, FlatList, TouchableOpacity, View} from 'react-native';
+import React, {memo, useRef} from 'react';
+import {
+  Animated,
+  Dimensions,
+  FlatList,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import ProductCard from '../../../components/ProductCard';
 
 const ItemSlide = ({data}) => {
   const navigation = useNavigation();
+  const scroll = useRef(new Animated.Value(0)).current;
+
   const keyExtractor = (item, index) => {
     return String(index + item.item_id);
   };
@@ -25,12 +33,24 @@ const ItemSlide = ({data}) => {
   };
   return (
     <View style={{backgroundColor: data.panel_color1, flexDirection: 'row'}}>
-      <View
+      <Animated.View
         style={{
           flex: 1,
           position: 'absolute',
           height: '100%',
           aspectRatio: 1 / 2,
+          transform: [
+            {
+              translateX: scroll.interpolate({
+                inputRange: [0, 100],
+                outputRange: [0, -10],
+              }),
+            },
+          ],
+          opacity: scroll.interpolate({
+            inputRange: [0, 100],
+            outputRange: [1, 0],
+          }),
         }}>
         <FastImage
           style={{
@@ -43,8 +63,12 @@ const ItemSlide = ({data}) => {
           }}
           resizeMode={FastImage.resizeMode.contain}
         />
-      </View>
-      <FlatList
+      </Animated.View>
+      <Animated.FlatList
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {x: scroll}}}],
+          {useNativeDriver: true},
+        )}
         contentContainerStyle={{
           marginLeft: 100,
           marginVertical: 8,

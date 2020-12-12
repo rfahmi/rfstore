@@ -1,5 +1,5 @@
-import React, {memo, useState} from 'react';
-import {ScrollView, StatusBar, Text, View} from 'react-native';
+import React, {memo, useState, useRef} from 'react';
+import {Animated, ScrollView, StatusBar, Text, View} from 'react-native';
 import {Divider, List} from 'react-native-paper';
 import HeaderBackTransparent from '../../components/HeaderBackTransparent';
 import FooterBuy from '../../components/FooterBuy';
@@ -9,6 +9,8 @@ import ProductPictures from '../../organism/product/ProductPictures';
 const Product = ({navigation, route}) => {
   const items = require('../../dummy/items.json');
   const pictures = require('../../dummy/item_pictures.json');
+  const scroll = useRef(new Animated.Value(0)).current;
+
   const {item_id} = route.params;
   const item = items.filter((i) => i.item_id === 1);
   const [data, setData] = useState();
@@ -19,8 +21,22 @@ const Product = ({navigation, route}) => {
         barStyle="dark-content"
         backgroundColor="rgba(0,0,0,0.1)"
       />
-      <HeaderBackTransparent />
-      <ScrollView style={{backgroundColor: '#fff', flex: 1}}>
+      <HeaderBackTransparent
+        headerOpacity={scroll.interpolate({
+          inputRange: [0, 300],
+          outputRange: [1, 0],
+        })}
+        visibility={scroll.interpolate({
+          inputRange: [0, 300],
+          outputRange: [0, 1],
+        })}
+      />
+      <Animated.ScrollView
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {y: scroll}}}],
+          {useNativeDriver: true},
+        )}
+        style={{backgroundColor: '#fff', flex: 1}}>
         <View
           style={{
             aspectRatio: 1 / 1,
@@ -107,8 +123,27 @@ const Product = ({navigation, route}) => {
           </Text>
         </View>
 
+        <Separator />
+
+        <View style={{padding: 16}}>
+          <Text style={{fontWeight: 'bold'}}>Deskripsi Produk</Text>
+          <Text numberOfLines={6}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            consequat ullamcorper porttitor. Mauris aliquet libero id dolor
+            ornare, ut rutrum erat congue. Vestibulum gravida odio eget arcu
+            facilisis venenatis. Donec vel urna nec tortor feugiat faucibus.
+            Nulla enim nisl, euismod at erat id, luctus fermentum dui. Ut non
+            tempor augue, ac luctus tellus. Aliquam erat volutpat. Donec vitae
+            libero est. Suspendisse commodo, ex vitae lobortis scelerisque,
+            nulla libero varius nibh, vel mattis ligula nisl eget turpis. Donec
+            sed nisi massa. Etiam eu mi eu turpis placerat sodales. Donec vitae
+            consequat sapien. Sed metus augue, ornare at aliquam vitae, pretium
+            in augue.
+          </Text>
+        </View>
+
         <View style={{marginBottom: 60}} />
-      </ScrollView>
+      </Animated.ScrollView>
       <FooterBuy />
     </>
   );

@@ -15,6 +15,7 @@ import TextInput from '../../components/TextInput';
 import BackButton from '../../components/BackButton';
 import {colors} from '../../constants/colors';
 import {emailValidator, passwordValidator} from '../../utils/validator';
+import {RNToasty} from 'react-native-toasty';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState({value: 'test@mail.com', error: ''});
@@ -29,8 +30,11 @@ const Login = ({navigation}) => {
       setPassword({...password, error: passwordError});
       return;
     }
-
     navigation.navigate('App', {screen: 'Home'});
+    RNToasty.Normal({
+      title: 'Selamat datang kembali',
+      position: 'center',
+    });
   };
 
   return (

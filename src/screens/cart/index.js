@@ -15,15 +15,14 @@ const Cart = () => {
   };
   return (
     <>
-      <View style={{backgroundColor: 'white'}}>
-        <FlatList
-          ListHeaderComponent={() => <ScreenTitle title="Cart" />}
-          data={items}
-          renderItem={_renderItems}
-          horizontal={false}
-          keyExtractor={keyExtractor}
-        />
-      </View>
+      <FlatList
+        contentContainerStyle={{backgroundColor: '#fff'}}
+        ListHeaderComponent={() => <ScreenTitle title="Cart" />}
+        data={items}
+        renderItem={_renderItems}
+        horizontal={false}
+        keyExtractor={keyExtractor}
+      />
       <FooterCart />
     </>
   );

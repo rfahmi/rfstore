@@ -3,11 +3,16 @@ import React from 'react';
 import {View} from 'react-native';
 import {Appbar, Button, IconButton} from 'react-native-paper';
 import {colors} from '../constants/colors';
+import {RNToasty} from 'react-native-toasty';
 
 const FooterBuy = () => {
   const navigation = useNavigation();
   const _handleBuy = () => navigation.navigate('App', {screen: 'Cart'});
-  const _handleAddCart = () => alert('To Do');
+  const _handleAddCart = () =>
+    RNToasty.Success({
+      title: 'Ditambahkan',
+      position: 'center',
+    });
 
   return (
     <Appbar

@@ -12,10 +12,6 @@ const FooterCart = () => {
   return (
     <Appbar
       style={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
         backgroundColor: '#fff',
         elevation: 5,
       }}>

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View} from 'react-native';
-import {Button, Card} from 'react-native-paper';
+import {Card} from 'react-native-paper';
 
 const FeedItem = ({item}) => {
   const _handleClaim = () => {
@@ -14,11 +14,6 @@ const FeedItem = ({item}) => {
           subtitle="Berlaku hingga: 20 Januari 2020"
         />
         <Card.Cover source={{uri: 'https://picsum.photos/700'}} />
-        <Card.Actions style={{justifyContent: 'flex-end'}}>
-          <Button onPress={_handleClaim} uppercase={false} mode="contained">
-            Klaim Sekarang
-          </Button>
-        </Card.Actions>
       </Card>
     </View>
   );
