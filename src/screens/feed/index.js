@@ -1,12 +1,18 @@
 import React, {useRef} from 'react';
-import {Animated, FlatList, StatusBar, StyleSheet, View} from 'react-native';
+import {Animated, StatusBar, StyleSheet, TouchableOpacity} from 'react-native';
+import {RNToasty} from 'react-native-toasty';
 import ScreenTitleParallax from '../../components/ScreenTitleParallax';
 import FeedItem from './FeedItem';
 
 const Feed = () => {
   const items = require('../../dummy/items.json');
   const scroll = useRef(new Animated.Value(0)).current;
-
+  const _handleClaim = () => {
+    RNToasty.Success({
+      title: 'Promosi di klaim',
+      position: 'center',
+    });
+  };
   const styles = StyleSheet.create({
     titleBar: {
       transform: [
@@ -21,7 +27,11 @@ const Feed = () => {
   });
 
   const _renderItems = ({item}) => {
-    return <FeedItem item={item} />;
+    return (
+      <TouchableOpacity onPress={_handleClaim}>
+        <FeedItem item={item} />
+      </TouchableOpacity>
+    );
   };
   const keyExtractor = (item, index) => {
     return String('ShopList' + index + item.item_id);

@@ -1,12 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {memo, useRef} from 'react';
-import {
-  Animated,
-  Dimensions,
-  FlatList,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Animated, Dimensions, TouchableOpacity, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import ProductCard from '../../../components/ProductCard';
 

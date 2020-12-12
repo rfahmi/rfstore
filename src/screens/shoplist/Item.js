@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
-import {Avatar, Button, List, Divider, IconButton} from 'react-native-paper';
+import {Text, View} from 'react-native';
+import FastImage from 'react-native-fast-image';
+import {Button, Divider, IconButton, List} from 'react-native-paper';
 import {colors} from '../../constants/colors';
 import {currencyFormat} from '../../utils/formatter';
 
@@ -18,11 +19,18 @@ const Item = ({item}) => {
         descriptionStyle={{fontSize: 14, fontWeight: 'bold', color: 'orange'}}
         style={{elevation: 5}}
         left={() => (
-          <Avatar.Image
-            source={{uri: item.item_pic}}
-            icon="folder"
-            style={{backgroundColor: '#eee'}}
-          />
+          <View
+            style={{
+              aspectRatio: 1 / 1,
+              elevation: 1,
+              borderColor: '#eee',
+              borderWidth: 1,
+            }}>
+            <FastImage
+              source={{uri: item.item_pic}}
+              style={{flex: 1, backgroundColor: '#eee', borderRadius: 1}}
+            />
+          </View>
         )}
         right={() => (
           <View

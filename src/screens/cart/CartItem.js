@@ -28,7 +28,7 @@ const CartItem = ({item}) => {
               <View
                 style={{
                   aspectRatio: 1 / 1,
-                  elevation: 3,
+                  elevation: 1,
                   borderColor: '#eee',
                   borderWidth: 1,
                 }}>

@@ -17,6 +17,7 @@ const black = '#000000';
 const red = '#D7262E';
 const green = '#007e33';
 const goldLight = '#fffccc';
+const goldYellow = '#FFDF00';
 
 export const colors = {
   ...DefaultTheme.colors,
@@ -34,4 +35,5 @@ export const colors = {
   red,
   green,
   goldLight,
+  goldYellow,
 };

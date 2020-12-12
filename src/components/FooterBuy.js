@@ -17,12 +17,9 @@ const FooterBuy = () => {
   return (
     <Appbar
       style={{
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
         backgroundColor: '#fff',
-        elevation: 5,
+        elevation: 0,
+        height: 48,
       }}>
       <View
         style={{
@@ -39,7 +36,7 @@ const FooterBuy = () => {
         />
         <Button
           onPress={_handleBuy}
-          style={{margin: 4}}
+          style={{margin: 4, flex: 1}}
           labelStyle={{fontSize: 10}}
           color={colors.primary}
           mode="contained">
@@ -47,7 +44,7 @@ const FooterBuy = () => {
         </Button>
         <Button
           onPress={_handleAddCart}
-          style={{margin: 4}}
+          style={{margin: 4, flex: 1}}
           labelStyle={{fontSize: 10}}
           color={colors.primary}
           mode="outlined">

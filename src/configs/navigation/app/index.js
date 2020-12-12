@@ -14,6 +14,7 @@ const AppStack = () => {
   return (
     <Tab.Navigator
       headerMode="none"
+      shifting={false}
       backBehavior="history"
       initialRouteName="Home"
       activeColor={colors.primary}
@@ -28,16 +29,6 @@ const AppStack = () => {
         }}
       />
       <Tab.Screen
-        name="Feed"
-        component={Feed}
-        options={{
-          tabBarLabel: 'Feed',
-          tabBarIcon: ({color}) => (
-            <Icon name="checkbox-multiple-blank" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Shoplist"
         component={Shoplist}
         options={{
@@ -47,6 +38,17 @@ const AppStack = () => {
           ),
         }}
       />
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Feed',
+          tabBarIcon: ({color}) => (
+            <Icon name="checkbox-multiple-blank" color={color} size={26} />
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="Cart"
         component={Cart}
