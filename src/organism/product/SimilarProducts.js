@@ -40,18 +40,17 @@ const SimilarProducts = ({data}) => {
           Produk Serupa
         </Text>
       </View>
-      <View style={{backgroundColor: data.panel_color1, flexDirection: 'row'}}>
-        <FlatList
-          data={data}
-          renderItem={_renderItems}
-          numColumns={2}
-          horizontal={false}
-          keyExtractor={keyExtractor}
-          initialNumToRender={10}
-          maxToRenderPerBatch={10}
-          removeClippedSubviews
-        />
-      </View>
+      <FlatList
+        data={data}
+        contentContainerStyle={{alignItems: 'center'}}
+        renderItem={_renderItems}
+        numColumns={2}
+        horizontal={false}
+        keyExtractor={keyExtractor}
+        initialNumToRender={10}
+        maxToRenderPerBatch={10}
+        removeClippedSubviews
+      />
     </>
   );
 };

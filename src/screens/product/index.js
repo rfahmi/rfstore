@@ -355,13 +355,25 @@ const Product = ({navigation, route}) => {
 
         <Separator />
         <View style={{padding: 16}}>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{flex: 1}}>
-              <Text style={{fontWeight: 'bold', fontSize: 16}}>
-                Ulasan Pembeli
-              </Text>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Text style={{fontSize: 12}}>10 Ulasan</Text>
+          <TouchableOpacity onPress={() => navigation.push('ProductReview')}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{flex: 1}}>
+                <Text style={{fontWeight: 'bold', fontSize: 16}}>
+                  Ulasan Pembeli
+                </Text>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Text style={{fontSize: 12}}>10 Ulasan</Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                  flex: 1,
+                }}>
+                <Icon name="star" size={24} color={colors.goldYellow} />
+                <Text style={{fontWeight: 'bold', fontSize: 24}}>5.0</Text>
               </View>
             </View>
             <View
@@ -369,22 +381,12 @@ const Product = ({navigation, route}) => {
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
-                flex: 1,
               }}>
-              <Icon name="star" size={24} color={colors.goldYellow} />
-              <Text style={{fontWeight: 'bold', fontSize: 24}}>5.0</Text>
+              <Icon name="chevron-down" size={18} color={colors.primary} />
+              <Text style={{fontStyle: 'italic', color: colors.primary}}>
+                Lihat Semua Ulasan
+              </Text>
             </View>
-          </View>
-          <TouchableOpacity
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'flex-end',
-            }}>
-            <Icon name="chevron-down" size={18} color={colors.primary} />
-            <Text style={{fontStyle: 'italic', color: colors.primary}}>
-              Lihat Semua Ulasan
-            </Text>
           </TouchableOpacity>
         </View>
 
