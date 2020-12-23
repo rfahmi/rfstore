@@ -33,7 +33,7 @@ const SearchStack = () => {
       <Stack.Screen
         name="SearchWebView"
         component={SearchWebView}
-        options={{title: 'Loading'}}
+        options={{headerShown: false, title: 'Loading'}}
       />
     </Stack.Navigator>
   );
